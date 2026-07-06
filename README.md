@@ -1,22 +1,12 @@
 <p align="center">
-  <h1 align="center">🕉️ PanthGuru — AI Travel Planner</h1>
+  <h1 align="center">PanthGuru — AI Travel Planner</h1>
   <p align="center">
-    <i>पन्थगुरु — "The Path Guide"</i><br/><br/>
-    An AI-powered agentic travel planner rooted in the spirit of ancient Indian exploration. PanthGuru builds comprehensive, day-by-day trip itineraries with real-time weather, places, expense estimates, and currency conversions — all through a conversational Streamlit interface.
+    <i>"The Path Guide"</i><br/><br/>
+    An AI-powered agentic travel planner rooted  exploration. PanthGuru builds comprehensive, day-by-day trip itineraries with real-time weather, places, expense estimates, and currency conversions — all through a conversational Streamlit interface.
   </p>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/LangChain-0.3-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain">
-  <img src="https://img.shields.io/badge/LangGraph-0.4-FF6F00?style=for-the-badge" alt="LangGraph">
-  <img src="https://img.shields.io/badge/Streamlit-1.45-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
-  <img src="https://img.shields.io/badge/FastAPI-0.115-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
-  <img src="https://img.shields.io/badge/Deploy-Sevalla-7C3AED?style=for-the-badge" alt="Sevalla">
-</p>
 
----
 
 ## ✨ Features
 
