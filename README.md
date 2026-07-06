@@ -310,20 +310,7 @@ The default provider is set in `agent/agentic_workflow.py`:
 graph = GraphBuilder(model_provider="groq")  # or "openai"
 ```
 
-### Streamlit Theme
 
-The dark theme is configured in `.streamlit/config.toml`:
-
-```toml
-[theme]
-primaryColor = "#6C63FF"
-backgroundColor = "#0E1117"
-secondaryBackgroundColor = "#1A1D29"
-textColor = "#FAFAFA"
-font = "sans serif"
-```
-
----
 
 ## 🔑 API Keys — Where to Get Them
 
@@ -362,13 +349,3 @@ font = "sans serif"
 
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<p align="center">
-  <b>🕉️ PanthGuru</b> — <i>पन्थगुरु</i> — "The Path Guide"<br/>
-  Built with ❤️ by <strong>Ram</strong> — powered by LangGraph & Groq
-</p>
