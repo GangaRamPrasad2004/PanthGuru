@@ -1,0 +1,61 @@
+# ============================================================
+# .dockerignore — Keep the Docker image lean
+# ============================================================
+
+# Version control
+.git
+.gitignore
+
+# Virtual environments
+env/
+.venv/
+venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Environment secrets (injected via Sevalla dashboard, not baked into image)
+.env
+
+# Notebooks & experiments (not needed in production)
+notebook/
+*.ipynb
+
+# Graph visualization (dev artifact)
+my_graph.png
+
+# Lock files (we use requirement.txt for Docker)
+uv.lock
+
+# Docker itself
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Agents / Gemini config
+.agents/
+.gemini/
+
+# Files not needed in production image
+*.md
+Procfile
+runtime.txt
+setup.py
+.python-version
+pyproject.toml
+ai_travel_planner.egg-info/
