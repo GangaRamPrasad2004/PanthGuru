@@ -17,8 +17,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.title("🕉️ PanthGuru — पन्थगुरु")
-st.caption("*The Path Guide — Your AI Travel Companion*")
+st.title(" PanthGuru")
+st.caption("*The Path Guide — Your AI Travel planner*")
 
 # Initialize chat history
 if "messages" not in st.session_state:
@@ -29,20 +29,20 @@ st.header("How can I help you in planning a trip? Let me know where do you want 
 
 # Chat input box at bottom
 with st.form(key="query_form", clear_on_submit=True):
-    user_input = st.text_input("User Input", placeholder="e.g. Plan a trip to your dream city for 5 days")
+    user_input = st.text_input("User Input", placeholder="e.g. which place do you want to explore now... ")
     submit_button = st.form_submit_button("pack the bags to voyage the 🌍 ")
 
 if submit_button and user_input.strip():
     try:
         # # Show user message
         # Show thinking spinner while backend processes
-        with st.spinner("Bot is thinking..."):
+        with st.spinner("helping you to plan your trip ..."):
             payload = {"question": user_input}
             response = requests.post(f"{BASE_URL}/query", json=payload)
 
         if response.status_code == 200:
             answer = response.json().get("answer", "No answer returned.")
-            markdown_content = f"""# 🌍 AI Travel Plan
+            markdown_content = f"""# Here is your Travel Plan for all the days ...
 
             # **Generated:** {datetime.datetime.now().strftime('%Y-%m-%d at %H:%M')}  
             # **Created by:** Atriyo's Travel Agent
