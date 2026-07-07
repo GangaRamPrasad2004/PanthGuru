@@ -1,12 +1,4 @@
-# ============================================================
-# PanthGuru (पन्थगुरु) — Production Dockerfile (Sevalla)
-# ============================================================
-# Build strategy : Dockerfile
-# Platform       : Sevalla (PaaS by Kinsta)
-# Architecture   : linux/amd64 (required by Sevalla)
-# Processes      : FastAPI (internal :8000) + Streamlit (public :$PORT)
-# Process manager: supervisord
-# ============================================================
+
 
 # ---------- Stage 1: Builder ----------
 FROM python:3.13-slim AS builder
@@ -46,18 +38,20 @@ RUN apt-get update && \
         supervisor \
         bash \
         curl \
+        dos2unix \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy installed Python packages from builder stage
 COPY --from=builder /usr/local/lib/python3.13/site-packages /usr/local/lib/python3.13/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
 
-# Copy supervisor config
+# Copy supervisor config and fix line endings
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN dos2unix /etc/supervisor/conf.d/supervisord.conf
 
-# Copy entrypoint script and make it executable
+# Copy entrypoint script, fix line endings, and make it executable
 COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
+RUN dos2unix /app/start.sh && chmod +x /app/start.sh
 
 # Copy the entire application source
 COPY . .

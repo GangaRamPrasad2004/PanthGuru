@@ -1,10 +1,4 @@
-#!/usr/bin/env bash
-# ============================================================
-# PanthGuru (पन्थगुरु) — Container Entrypoint
-# ============================================================
-# Sevalla injects the PORT env var at runtime.
-# This script ensures PORT has a default, then starts supervisord.
-# ============================================================
+
 
 set -e
 
@@ -12,7 +6,7 @@ set -e
 export PORT="${PORT:-8080}"
 
 echo "=========================================="
-echo " 🕉️  PanthGuru (पन्थगुरु) — Starting up"
+echo "  — Starting up"
 echo " Streamlit  → 0.0.0.0:${PORT} (public)"
 echo " FastAPI    → 127.0.0.1:8000  (internal)"
 echo "=========================================="
