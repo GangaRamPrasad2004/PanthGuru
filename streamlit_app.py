@@ -8,7 +8,7 @@ import sys
 
 # Backend endpoint — inside the Sevalla container, FastAPI runs on localhost:8000.
 # Override via the BACKEND_URL env var if needed.
-BASE_URL = os.environ.get("BACKEND_URL", "http://localhost:8000")
+BASE_URL = os.environ.get("BACKEND_URL")
 
 st.set_page_config(
     page_title="PanthGuru — AI Travel Planner",
